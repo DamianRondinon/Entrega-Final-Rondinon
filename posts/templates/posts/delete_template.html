@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>¿Desea realizar esta acción "{{object}}"?</p>
+
+    <a href="{% url 'posts' %}">Regresar</a>
+    <input type="submit" value="Confirm">
+</form>
+
+{% endblock %}
